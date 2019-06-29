@@ -290,3 +290,8 @@ input[name="tool"]:checked + span {
   padding: 5px;
   cursor: pointer;
 }
+
+.coordinates-canvas {
+  margin-top: 10px;
+  margin-left: 5px;
+}
