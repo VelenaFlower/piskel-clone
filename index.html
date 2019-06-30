@@ -4,122 +4,71 @@
     <meta charset="UTF-8">
     <title>Piskel Clone</title>
     <link href="styles.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrap">
         <header class="header">
-          <span>Piskel Clone</span>
+            <span>Piskel Clone</span>
+            <a href="./piskel/index.html" class="link-piskel">Create Sprite</a>
         </header>
-        <main class="main-wrapper">
-            <section class="tools-container">
-                <div class="tool-section" id="tools">
-                    <label title="pen">
-                        <input type="radio" name="tool" value="pen" checked>
-                        <span class="btn-tool pen"></span>
-                    </label>
-                    <label title="bucket">
-                        <input type="radio" name="tool" value="bucket">
-                        <span class="btn-tool bucket"></span>
-                    </label>
-                    <label title="eraser">
-                        <input type="radio" name="tool" value="eraser">
-                        <span class="btn-tool eraser"></span>
-                    </label>
-                    <label title="rectangle">
-                        <input type="radio" name="tool" value="rectangle">
-                        <span class="btn-tool rectangle"></span>
-                    </label>
-                    <label title="move">
-                        <input type="radio" name="tool" value="move">
-                        <span class="btn-tool move"></span>
-                    </label>
-                    <label title="lighten. CTRL darken">
-                        <input type="radio" name="tool" value="lighten">
-                        <span class="btn-tool lighten"></span>
-                    </label>
-                    <label title="vertical mirror pen">
-                        <input type="radio" name="tool" value="mirror">
-                        <span class="btn-tool vertical-mirror"></span>
-                    </label>
-                    <label title="paint all pixels of the same color">
-                        <input type="radio" name="tool" value="color-swap">
-                        <span class="btn-tool color-swap"></span>
-                    </label>
-                    <label title="stroke">
-                        <input type="radio" name="tool" value="stroke">
-                        <span class="btn-tool stroke"></span>
-                    </label>
-                    <label title="circle">
-                        <input type="radio" name="tool" value="circle">
-                        <span class="btn-tool circle"></span>
-                    </label>
-                    <label title="color picker">
-                        <input type="radio" name="tool" value="color-picker">
-                        <span class="btn-tool color-picker"></span>
-                    </label>
-                    <label title="dithering">
-                        <input type="radio" name="tool" value="dithering">
-                        <span class="btn-tool dithering"></span>
-                    </label>
+        <main>
+            <section class="section-screen">
+                <div class="content">
+                    <p>
+                        <b>Piskel Clone is a free online editor for animated sprites & pixel art</b>
+                    </p>
+                    <p>
+                        Create animations in your browser.
+                    </p>
+                    <a href="./piskel/index.html" class="link-piskel"><b>Create Sprite</b></a>
                 </div>
-                <div class="preview-color">
-                    <label title="primary color">
-                        <input type="color" class="input-color active-color" id="primary-color" value="#000000">
-                    </label>
-                    <div class="swap-color"></div>
-                    <label title="secondary color">
-                        <input type="color" class="input-color prev-color" id="secondary-color" value="#5c5c5c">
-                    </label>
-                </div>
+                <div class="gif-piskel"></div>
             </section>
-            <section class="frames-wrapper">
-                <ul class="frames" id="frames">
-                    <li class="item-frame active-item" id="frame">
-                        <div class="item-container">
-                            <canvas class="canvas-frame active" id="canvas-frame" width="32" height="32"></canvas>
-                            <div class="btn-frame number-frame">1</div>
-                            <div class="btn-frame tile-overlay-delete" title="delete this frame" id="delete-frame"></div>
-                            <div class="btn-frame tile-overlay-copy" title="duplicate this frame" id="copy-frame"></div>
-                            <div class=" btn-frame tile-overlay-move" id="move-frame"></div>
-                        </div>
-                    </li>
-                </ul>
-                <button class="btn-option" id="btn-add-frame"><img src="images/plus-icon.png" alt="">Add new frame</button>
-            </section>
-            <section class="drawing-canvas-container">
-                <canvas class="drawing-canvas" id="drawing-canvas" width="32" height="32"></canvas>
-            </section>
-            <section class="animated-preview-container">
-                <canvas class="canvas-animation" id="animation-frame" width="32" height="32"></canvas>
-                <div class="main-fps">
-                    <p class="number-fps-min"><span id="fps-value">4</span> fps</p>
-                    <label for="input-range-fps"></label>
-                    <input type="range" id="input-range-fps" class="input-range-fps" min="1" max="24" step="1" value="4">
-                    <p class="number-fps-max">24 fps</p>
-                </div>
-                <div class="wrap-btn-option">
-                    <button class="btn-option" id="open-animation"><img src="images/open-preview.png" alt="">Open preview</button>
-                </div>
-                <p class="resize-title">
-                    Canvas sizes
+            <section>
+                <p class="title-tools">
+                    You can use tools for create sprite
                 </p>
-                <div class="resize-container" id="resize">
-                    <label class="resize-item">
-                        <input type="radio" name="resize" value="32" checked> 32x32
-                    </label>
-                    <label class="resize-item">
-                        <input type="radio" name="resize" value="64"> 64x64
-                    </label>
-                    <label class="resize-item">
-                        <input type="radio" name="resize" value="128"> 128x128
-                    </label>
+                <div class="tools">
+                    <div class="tool"><img src="assets/tool-pen.png" alt=""><span>Pen</span></div>
+                    <div class="tool"><img src="assets/tool-vertical-mirror-pen.png" alt=""><span>Mirror line</span></div>
+                    <div class="tool"><img src="assets/tool-bucket.png" alt=""><span>Paint bucket</span></div>
+                    <div class="tool"><img src="assets/tool-colorswap.png" alt=""><span>Paint all pixels of the same color</span></div>
+                    <div class="tool"><img src="assets/tool-eraser.png" alt=""><span>Eraser</span></div>
+                    <div class="tool"><img src="assets/tool-stroke.png" alt=""><span>Stroke</span></div>
                 </div>
-              <div class="coordinates-canvas">
-                <span id="position"></span>
-              </div>
-          </section>
+                <div  class="tools">
+                    <div class="tool"><img src="assets/tool-rectangle.png" alt=""><span>Rectangle</span></div>
+                    <div class="tool"><img src="assets/tool-circle.png" alt=""><span>Circle</span></div>
+                    <div class="tool"><img src="assets/tool-move.png" alt=""><span>Move</span></div>
+                    <div class="tool"><img src="assets/tool-color-picker.png" alt=""><span>Color picker</span></div>
+                    <div class="tool"><img src="assets/tool-lighten.png" alt=""><span>Lighten. Tap Ctrl for darken</span></div>
+                    <div class="tool"><img src="assets/tool-dithering.png" alt=""><span>Dithering</span></div>
+                </div>
+            </section>
+            <section class="section-examples">
+                <p class="title-example">
+                    Example Sprites
+                </p>
+                <div class="wrap-examples">
+                    <div class="item panda"></div>
+                    <div class="item color"></div>
+                    <div class="item lama"></div>
+                </div>
+                <a href="./piskel/index.html" class="link-piskel"><b>Create Sprite</b></a>
+            </section>
+            <footer class="footer">
+                <section class="info">
+                    <img src="assets/photo-elena-yanchenko.jpg"  alt="">
+                    Янченко Е.Н.
+                    <a href="https://github.com/VelenaFlower" target="_blank">GitHab</a>
+                    <a href="https://t.me/velsperia">Telegram</a>
+                    email: <a href="mailto:veleno.ajt@gmail.com" target="_blank">veleno.ajt@gmail.com</a>
+                    <div class="copyright">
+                        © 2019  VelenaFlower
+                    </div>
+                </section>
+            </footer>
         </main>
     </div>
-<script type="text/javascript" src="app.bundle.js"></script></body>
+</body>
 </html>

@@ -1,0 +1,307 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
+  border-right: 1px solid #808080;
+  border-left: 1px solid #808080;
+}
+
+.header {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  box-shadow: 0 8px 3px -5px #808080;
+}
+
+.link-landing {
+  color: #000;
+  text-decoration: none;
+}
+
+.link-landing:hover {
+  color: #808080;
+  transition: .3s;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.tools-container,
+.frames-wrapper,
+.animated-preview-container {
+  margin: 10px;
+}
+
+.tool-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 350px;
+}
+
+.btn-tool {
+  display: block;
+  margin-right: 1px;
+  margin-bottom: 2px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #5c5c5c;
+  cursor: pointer;
+}
+
+input[name="tool"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[name="tool"]:checked + span {
+  border: 2px solid #ffd700;
+}
+
+.pen {
+  background: url("images/tool-pen.png") no-repeat 50% 50% #eee;
+}
+
+.bucket {
+  background: url("images/tool-bucket.png") no-repeat 50% 50% #eee;
+}
+
+.eraser {
+  background: url("images/tool-eraser.png") no-repeat 50% 50% #eee;
+}
+
+.rectangle {
+  background: url("images/tool-rectangle.png") no-repeat 50% 50% #eee;
+}
+
+.move {
+  background: url("images/tool-move.png") no-repeat 50% 50% #eee;
+}
+
+.lighten {
+  background: url("images/tool-lighten.png") no-repeat 50% 50% #eee;
+}
+
+.vertical-mirror {
+  background: url("images/tool-vertical-mirror-pen.png") no-repeat 50% 50% #eee;
+}
+
+.color-swap {
+  background: url("images/tool-colorswap.png") no-repeat 50% 50% #eee;
+}
+
+.stroke {
+  background: url("images/tool-stroke.png") no-repeat 50% 50% #eee;
+}
+
+.circle {
+  background: url("images/tool-circle.png") no-repeat 50% 50% #eee;
+}
+
+.color-picker {
+  background: url("images/tool-color-picker.png") no-repeat 50% 50% #eee;
+}
+
+.dithering {
+  background: url("images/tool-dithering.png") no-repeat 50% 50% #eee;
+}
+
+.preview-color {
+  position: relative;
+  width: 98px;
+  height: 98px;
+  padding-left: 10px;
+}
+
+.input-color {
+  width: 44px;
+  height: 44px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.active-color {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.prev-color {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.swap-color {
+  width: 32px;
+  height: 26px;
+  margin-top: 4px;
+  margin-left: 7px;
+  background: url("images/arrow.svg") no-repeat;
+  background-size: 22px;
+  cursor: pointer;
+}
+
+.swap-color:hover {
+  filter: brightness(0);
+  transition: .3s;
+}
+
+.frames {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.item-frame {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+}
+
+.canvas-frame {
+  width: 120px;
+  height: 120px;
+  background-color: #eee;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.btn-frame {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.number-frame {
+  top: 0;
+  text-align: center;
+  background-color: #ffd700;
+}
+
+.tile-overlay-delete {
+  top: 0;
+  right: 0;
+  background: url("images/delete-icon.png") no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.tile-overlay-copy {
+  right: 0;
+  bottom: 0;
+  background: url("images/copy-icon.png") no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.tile-overlay-move {
+  left: 0;
+  bottom: 0;
+  background: url("images/move-icon.png") no-repeat;
+  background-size: 20px;
+  cursor: move;
+}
+
+.preview-container-active {
+  background-color: #ffffe0;
+  border: 2px dashed #ffd700;
+}
+
+.wrap-btn-option {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-option {
+  display: flex;
+  align-items: center;
+  width: 123px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.active-item {
+  border: 2px solid #ffd700;
+}
+
+.drawing-canvas-container {
+  width: 640px;
+  height: 640px;
+  margin: 10px;
+  border: 1px solid #ccc;
+
+}
+
+.drawing-canvas {
+  width: 640px;
+  height: 640px;
+  background-color: #eee;
+  image-rendering: pixelated;
+}
+
+.canvas-animation {
+  width: 270px;
+  height: 270px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  image-rendering: pixelated;
+}
+
+.main-fps {
+  display: flex;
+  justify-content: center
+}
+
+.number-fps-min {
+  margin-right: 10px;
+}
+
+.number-fps-max {
+  margin-left: 10px;
+}
+
+.resize-title {
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+.resize-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-resize {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.coordinates-canvas {
+  margin-top: 10px;
+  margin-left: 5px;
+}
